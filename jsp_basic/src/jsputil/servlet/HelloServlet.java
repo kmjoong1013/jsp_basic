@@ -1,6 +1,8 @@
 package jsputil.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,12 @@ public class HelloServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String age =  request.getParameter("age");
+		//response.getWriter().append("Served at: ").append(request.getContextPath()).append(" age : " +age);
+		PrintWriter out = response.getWriter();
+		out.println("<html><body>");
+		out.println("<h1> Hello World Package Servlet <h1>");
+		out.println("</body></html>");
 	}
 
 	/**
