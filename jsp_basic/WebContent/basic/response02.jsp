@@ -11,7 +11,6 @@
 response02_a.jsp 페이지에서 code가 A-100일때 정상 페이지로 이동해서 주문수량 표시
 A-100이 아니면 상품 준비중 페이지를 표시하시오.
  -->
- 
 <form action="response02_a.jsp" method="post">
 	<select name="code">
 		<option value="">--선택--</option>

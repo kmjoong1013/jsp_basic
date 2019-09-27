@@ -7,14 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% boolean login = true; %>
-<% if(login){ %>
-	아이디<input type="text" name="id"/><br/>
-	암호<input type="text" name="id"/><br/>
-	<input type="button" value="로그인"/>
-<% }else{ %>
-	<input type="button" value="로그아웃"/>
-<% } %>
-
+<h3>샘슝냉장고 기획전</h3>
+<% 
+	String num = request.getParameter("num");
+%>
+샘슝냉장고  주문수량 <%=num %>
 </body>
 </html>
