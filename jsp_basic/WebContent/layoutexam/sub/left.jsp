@@ -2,7 +2,7 @@
 <form name="loginFrm" action="loginProc.jsp">
 <table width="150" border="1">
 	<tr>
-		<td >아이디</td><td><input type="text" name="id" size="8"></td>
+		<td><font size="2px;">아이디</font></td><td><input type="text" name="id" size="8"></td>
 	</tr>
 	<tr>
 		<td>암호</td><td><input type="password" name="pass" size="8"></td>

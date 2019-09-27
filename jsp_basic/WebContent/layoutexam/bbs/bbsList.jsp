@@ -21,4 +21,4 @@
 		<td><input type="button" value="글쓰기" onclick="moveLayout('bbs/bbsWirte.jsp')"/></td>
 	</tr>
 </table>
-<a href="main.jsp?centerPage=sub/center.jsp">센터 페이지</a>
+<a href="main.jsp?centerPage=sub/center.jsp">메인 페이지</a>
