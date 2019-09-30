@@ -24,3 +24,19 @@
 	</tr>
 	
 </table>
+<% %>
+<form name="loginFrm" action="logOutProc.jsp">
+<table width="200" height="100">
+	<tr>
+		<td><input type="submit" value="로그아웃"></td>
+	</tr>
+	<tr>
+		<td><%=id %></td>
+	</tr>
+	<tr>
+		<td>회원정보수정</td>
+	</tr>
+	<tr>
+		<td><a href="/jsp_basic/layout/main.jsp?centerPage=bbs/bbsList.jsp"></a>
+</table>
+</form>
