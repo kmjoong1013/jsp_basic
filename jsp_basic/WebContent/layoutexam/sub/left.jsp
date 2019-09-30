@@ -7,13 +7,15 @@
 	<tr>
 		<td>암호</td><td><input type="password" name="pass" size="8"></td>
 	</tr>
-	<tr align="center"><td colspan="2"><input type="submit" value="로그인"></td></tr>
+	<tr align="center"><td colspan="2">
+<input type="checkbox" name="idSave">아이디저장<input type="submit" value="로그인"></td></tr>
 </table>
 </form>
 <table>
 	<tr>
-	<td>		
-회원가입</td>
+	<td>	
+	<a href="main.jsp?centerPage=bbs/join.jsp">	
+회원가입</a></td>
 	</tr>
 	<tr>
 		<td>		
