@@ -68,6 +68,24 @@ public class MemberDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String query = "select * from member where id = ?";
+		try{
+			Class.forName(driver);
+			con = DriverManager.getConnection(url,"root","st00");
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+					result = 1;
+				}
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}finally{
+			try{ 
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(con != null) con.close();
+			}catch(Exception e){}
+		}
 		return result;
 	}
 
@@ -79,7 +97,29 @@ public class MemberDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String query = "select id, passwd from member where id = ?";
-
+		try{
+			Class.forName(driver);
+			con = DriverManager.getConnection(url,"root","st00");
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				String dbPass = rs.getString("passwd");
+				if(dbPass.equals(passwd)){
+					result = 1;
+				}else {
+					result = 0;
+				}
+			}
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}finally{
+			try{ 
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(con != null) con.close();
+			}catch(Exception e){}
+		}
 		return result;
 	}
 	
