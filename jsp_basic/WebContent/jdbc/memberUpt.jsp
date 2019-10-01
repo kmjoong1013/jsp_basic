@@ -1,7 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="jsputil.member.*" %>
 <%
-	String id = request.getParameter("id");
+	//String id = request.getParameter("id");
+	String id = (String)session.getAttribute("myId");
 	MemberDAO memberDao = new MemberDAO();
 	MemberVO member = memberDao.getMember(id);
 	if(member == null) member = new MemberVO();

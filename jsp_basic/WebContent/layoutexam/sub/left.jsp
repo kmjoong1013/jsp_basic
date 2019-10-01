@@ -27,8 +27,8 @@
 <table>
    <tr>
    <td>
-   <a href = ""></a>      
-회원가입</td>
+   <a href = "C:\Users\Administrator\git\jsp_basic\jsp_basic\WebContent\jdbc\memberForm.jsp">     
+회원가입</a> </td>
    </tr>
    <tr>
       <td>      
