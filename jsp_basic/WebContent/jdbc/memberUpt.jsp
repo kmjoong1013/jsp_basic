@@ -33,7 +33,8 @@ INPUT {
       <tr> 
         <td>아이디</td>
         <td> 
-		  <input type="text" name="id" size="20" readonly value="<%=id%>"><input type="button" value="중복확인"> </td>
+		  <input type="text" name="id" size="20" readonly value="<%=id%>">
+		  <input type="button" value="중복확인"> </td>
       </tr>
       <tr> 
         <td>비밀번호</td> 
