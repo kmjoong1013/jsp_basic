@@ -3,6 +3,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,25 @@ public class GoodsDAO {
 		PreparedStatement pstmt = null;
 		String query = "insert into goods(code, name, price, color, regDate)" 
 					  +"values(?,?,?,?,now())";
-		
+		try{
+			Class.forName(driver); // 드라이버 로딩 
+			con = DriverManager.getConnection(url, "root", "st00"); // 컨넥션
+			pstmt = con.prepareStatement(query);
+			
+			pstmt.setString(1, goods.getCode());
+			pstmt.setString(2, goods.getName());
+			pstmt.setInt(3, goods.getPrice());
+			pstmt.setString(4, goods.getColor());
+			int cnt = pstmt.executeUpdate();// insert update delete
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}finally{
+			try{ 
+				if(pstmt != null) pstmt.close();
+				if(con != null)con.close();
+			}catch(Exception e){}
+		}
 	}
 	public GoodsVO getGoodsInfo(String code){
 		Connection con = null;
