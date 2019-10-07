@@ -11,7 +11,8 @@
 <title><%=title%></title>
 <script>
 	function openDup(){
-		var win = window.open("codeDup.html","","width=400,height=500");
+		var strCode = goodsInsFrm.code.value;
+		window.open("codeDup.jsp?code="+strCode,"","width=400,height=500");
 	}
 </script>
 </head>

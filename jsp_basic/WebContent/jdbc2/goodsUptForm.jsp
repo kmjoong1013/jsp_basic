@@ -1,15 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="jsputil.goods.*" %>
 <%
-	String mode = request.getParameter("mode");
-	String title = "상품등록";
-	String actionPage = "goodsInsProc.jsp";
+	String code = request.getParameter("code");
 
+	GoodsDAO goodsDAO = new GoodsDAO();
+	GoodsVO goods = goodsDAO.getGoodsInfo(code);
+	if(goods == null) goods = new GoodsVO();
+	
+	String title = "상품수정";
+	String actionPage = "goodsUptProc.jsp";
 %>
 <html>
 <head>
 <title><%=title%></title>
-<script>
+<script type="text/javascript">
+	function goGoodsList() {
+		location.href = '/jsp_basic/jdbc2/goodsList.jsp';
+	}
 	function openDup(){
 		var win = window.open("codeDup.html","","width=400,height=500");
 	}
@@ -23,7 +31,7 @@
 					코드
 				</td>
 				<td>
-					<input type="text" name="code" value="">
+					<input type="text" name="code" value="<%=code%>">
 					<input type="button" value="중복확인" onclick="openDup()">
 				</td>
 			</tr>
@@ -32,7 +40,7 @@
 					상품명
 				</td>
 				<td>
-					<input type="text" name="name">
+					<input type="text" name="name" value="<%=goods.getName()%>">
 				</td>
 			</tr>			
 			<tr>
@@ -40,7 +48,7 @@
 					단가
 				</td>
 				<td>
-					<input type="text" name="price">
+					<input type="text" name="price" value="<%=goods.getPrice()%>">
 				</td>
 			</tr>
 			<tr>
@@ -48,7 +56,7 @@
 					색상
 				</td>
 				<td>
-					<select name="color">
+					<select name="color" value="<%=goods.getColor()%>">
 						<option value="">--선택--</option>
 						<option value="red" >붉은색</option>
 						<option value="white" >흰색</option>

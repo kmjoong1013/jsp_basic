@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ page import="jsputil.goods.*" %>    
+<%@ page import="jsputil.goods.*" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String code = request.getParameter("code");
@@ -24,7 +24,7 @@
 	
 	// member
 	GoodsDAO goodsDAO = new GoodsDAO();
-	goodsDAO.goodsIns(goods); 
+	goodsDAO.goodsUpt(goods); 
 %>
 등록 완료 <br/>
 <a href="goodsList.jsp">상품목록</a>
