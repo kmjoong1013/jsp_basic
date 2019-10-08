@@ -11,22 +11,22 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String code = request.getParameter("code");
-	String name = request.getParameter("name");
-	String s_price = request.getParameter("price");
-	int price = Integer.parseInt(s_price);
-	String color = request.getParameter("color");
+	//String name = request.getParameter("name");
+	//String s_price = request.getParameter("price");
+	//int price = Integer.parseInt(s_price);
+	//String color = request.getParameter("color");
 	
 	GoodsVO goods = new GoodsVO();
 	goods.setCode(code);
-	goods.setName(name);
-	goods.setPrice(price);
-	goods.setColor(color);
+	//goods.setName(name);
+	//goods.setPrice(price);
+	//goods.setColor(color);
 	
 	// member
 	GoodsDAO goodsDAO = new GoodsDAO();
-	//goodsDAO.goodsDel(goods); 
+	goodsDAO.goodsDel(code); 
 %>
-등록 완료 <br/>
+삭제 완료 <br/>
 <a href="goodsList.jsp">상품목록</a>
 </body>
 </html>

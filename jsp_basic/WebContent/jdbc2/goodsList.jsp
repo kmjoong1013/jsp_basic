@@ -33,7 +33,7 @@
 			<td><%=goods.getName() %></td>
 			<td><%=goods.getPrice() %></td>
 			<td><%=goods.getColor() %></td>
-			<td><a href="goodsUptForm.jsp?mode=upt&code=<%=goods.getCode()%>">수정</a>/삭제</td>
+			<td><a href="goodsUptForm.jsp?mode=upt&code=<%=goods.getCode()%>">수정</a><a href="goodsDelProc.jsp?mode=del&code=<%=goods.getCode()%>">/삭제</a></td>
 		</tr>
 			<% } %>
 		<% } %>		
