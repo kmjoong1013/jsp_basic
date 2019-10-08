@@ -127,7 +127,24 @@ public class GoodsDAO {
 		}
 	}
 	public void goodsDel(String code){
-		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String query = "delete from goods where code = ? ";
+		try{
+			Class.forName(driver);
+			con = DriverManager.getConnection(url,"root","st00");
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, code);
+			pstmt.executeUpdate();
+			
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}finally{
+			try{ 
+				if(pstmt != null) pstmt.close();
+				if(con != null)con.close();
+			}catch(Exception e){}
+		}
 	}	
 	
 	public int codeDup(String code){
