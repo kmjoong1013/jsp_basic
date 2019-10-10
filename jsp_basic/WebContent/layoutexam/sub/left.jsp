@@ -27,7 +27,7 @@
 <table>
    <tr>
    <td>
-   <a href = "C:\Users\Administrator\git\jsp_basic\jsp_basic\WebContent\jdbc\memberForm.jsp">     
+   <a href = "main.jsp?centerPage=join.jsp">     
 회원가입</a> </td>
    </tr>
    <tr>

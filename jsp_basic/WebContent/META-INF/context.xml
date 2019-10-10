@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<!--  url="jdbc:mysql://localhost:3306/test" -->
+<!--  com.mysql.jdbc.Driver -->
+<!-- driverClassName="oracle.jdbc.driver.OracleDriver"  -->
+                  <!-- url="jdbc:oracle:thin:@127.0.0.1:1521:MTDI"  -->
+<!-- 
+  loginTimeout :Database에 연결하기 위한 login timeout(in seconds)을 설정
+  maxWait : query 응답 최대 대기 시간
+  maxActive : 최대 연결 pool 갯수
+  initialSize : 초기 연결 pool 갯수 
+ -->                  
+     <Resource name="jdbc/pool01"
+                  auth="Container"
+                  type="javax.sql.DataSource"
+                  driverClassName="com.mysql.jdbc.Driver"
+                  loginTimeout="10"
+                  maxWait="5000" 
+                  username="root"
+                  password="st00"
+                  testOnBorrow="true"
+                  url="jdbc:mysql://localhost:3306/study?useUnicode=true&amp;characterEncoding=utf8">
+       </Resource>
+</Context>
