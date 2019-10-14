@@ -66,7 +66,7 @@ window.attachEvent("onload",function() {
 
 <%  } else {    %>
 <table border="1" width="700" cellpadding="0" cellspacing="0" align="center"> 
-    <tr height="30" bgcolor="#B7F0B1"> 
+    <tr height="30" bgcolor="lightgray"> 
       <td align="center"  width="50"  >번 호</td> 
       <td align="center"  width="250" >제   목</td> 
       <td align="center"  width="100" >작성자</td>
@@ -145,6 +145,7 @@ window.attachEvent("onload",function() {
 	<input type="hidden" name="pageNum" value="" >
 </form>
 <form name="boardWriteFrm" action="writeForm.jsp" method="post">
+	검색 <input type="text" name="search">
 	<input type="hidden" name="HTML_TITLE" value="글 쓰기" >
 	<input type="hidden" name="CENTER_PAGE" value="board/writeForm.jsp" >
 	<input type="hidden" name="pageNum" value="" >

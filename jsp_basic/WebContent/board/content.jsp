@@ -29,35 +29,35 @@
 <form>
 <table width="500" border="1" cellspacing="0" cellpadding="0"  bgcolor="" align="center">  
   <tr height="30">
-    <td align="center" width="125" bgcolor="#B7F0B1">글번호</td>
+    <td align="center" width="125" bgcolor="lightgray">글번호</td>
     <td align="center" width="125" align="center">
 	     <%=article.getNum()%></td>
-    <td align="center" width="125" bgcolor="#B7F0B1">조회수</td>
+    <td align="center" width="125" bgcolor="lightgray">조회수</td>
     <td align="center" width="125" align="center">
 	     <%=article.getReadcount()%></td>
   </tr>
 <!-- -------------------------------------- -->  
   <tr height="30">
-    <td align="center" width="125" bgcolor="#B7F0B1">작성자</td>
+    <td align="center" width="125" bgcolor="lightgray">작성자</td>
     <td align="center" width="125" align="center">
 	     <%=article.getWriter()%></td>
-    <td align="center" width="125" bgcolor="#B7F0B1" >작성일</td>
+    <td align="center" width="125" bgcolor="lightgray" >작성일</td>
     <td align="center" width="125" align="center">
 	     <%= sdf.format(article.getReg_date())%></td>
   </tr>
   <tr height="30">
-    <td align="center" width="125" bgcolor="#B7F0B1">글제목</td>
+    <td align="center" width="125" bgcolor="lightgray">글제목</td>
     <td align="center" width="375" align="center" colspan="3">
 	     <%=article.getSubject()%></td>
   </tr>
   <tr>
-    <td align="center" width="125" bgcolor="#B7F0B1">글내용</td>
+    <td align="center" width="125" bgcolor="lightgray">글내용</td>
     <td align="left" width="375" colspan="3">
     <%=article.getContent()%></td>
   </tr>
 <!-- -------------------------------------- -->
 <tr>
-    <td align="center" width="125" bgcolor="#B7F0B1">첨부파일</td>
+    <td align="center" width="125" bgcolor="lightgray">첨부파일</td>
     <td align="left" width="375" colspan="3">&nbsp;
     <a href="download.jsp?num=<%=article.getNum()%>"><%=fileName %></a></td>
 </tr>   
